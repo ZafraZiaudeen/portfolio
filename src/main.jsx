@@ -5,9 +5,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RootLayout from './layouts/root.layout';
 import MainLayout from './layouts/main.layout';
 import HomePage from './pages/home.page';
-import AboutPage from './pages/About.page';
-import ProjectDetailPage from './pages/ProjectDetail.page';
-import ProjectsPage from './pages/Project.page';
+import AboutPage from './pages/about.page';
+import ProjectDetailPage from './pages/projectDetail.page';
+import ProjectsPage from './pages/project.page';
 import ContactPage from './pages/contact.page';
 
 createRoot(document.getElementById('root')).render(
