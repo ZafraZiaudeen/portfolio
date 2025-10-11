@@ -9,8 +9,8 @@ export function ProjectsSection() {
   const projects = getFeaturedProjects()
 
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-12 bg-background">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 font-[family-name:var(--font-playfair)]">Featured Projects</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -20,7 +20,7 @@ export function ProjectsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {projects.map((project) => (
-            <Card key={project.id} className="overflow-hidden hover:shadow-xl transition-shadow group">
+            <Card key={project.id} className="overflow-hidden hover:shadow-xl transition-shadow group flex flex-col h-full">
               <div className="relative h-48 overflow-hidden bg-muted">
                 <img
                   src={project.image || "/placeholder.svg"}
@@ -28,24 +28,28 @@ export function ProjectsSection() {
                   className="w-full h-full object-cover transition-transform group-hover:scale-105"
                 />
               </div>
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                  {project.status && (
-                    <Badge variant={project.status === "Live" ? "default" : "secondary"}>{project.status}</Badge>
-                  )}
-                </div>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.slice(0, 4).map((tag) => (
-                    <Badge key={tag} variant="outline">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
+              <div className="flex-1">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-xl">{project.title}</CardTitle>
+                    {project.status && (
+                      <Badge variant={project.status === "Live" ? "default" : "secondary"}>{project.status}</Badge>
+                    )}
+                  </div>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.slice(0, 4).map((tag) => (
+                      <Badge key={tag} variant="outline">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+
+              </div>
+
               <CardFooter className="gap-2">
                 <Button asChild size="sm" variant="default">
                   <Link to={`/projects/${project.id}`}>

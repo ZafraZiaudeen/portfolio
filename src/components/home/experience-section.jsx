@@ -5,8 +5,8 @@ import { Briefcase, GraduationCap } from "lucide-react"
 
 export function ExperienceSection() {
   return (
-    <section className="py-20 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-12 bg-secondary/30">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 font-[family-name:var(--font-playfair)]">Professional Experience</h2>
           <p className="text-xl text-muted-foreground">

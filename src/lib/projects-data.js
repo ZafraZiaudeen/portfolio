@@ -1,4 +1,3 @@
-// projects-data.js
 export const projects = [
   {
     id: "horizone-hotel-booking",
@@ -90,62 +89,133 @@ export const projects = [
       "I'm building a cloud-native SaaS platform using React and TypeScript for the frontend, GoLang for high-performance backend services, and AWS services for scalable infrastructure. The platform uses DynamoDB for flexible data storage, S3 for media management, and Lambda for serverless computing. The architecture ensures high availability, scalability, and cost-effectiveness.",
     results: [
       "Currently in beta testing with 50+ retailers",
-      "Reduced inventory management time by 60% in ea...(truncated 6533 characters)...s, secure payments, and order management while providing an excellent user experience.",
+      "Reduced inventory management time by 60% in early testing",
+      "Achieved 99.95% uptime during beta phase",
+      "Processing 10,000+ products across test accounts",
+      "Sub-second response times for all API endpoints",
     ],
     techStack: [
       {
         category: "Frontend",
-        technologies: ["React", "TypeScript", "Tailwind CSS", "React Query"],
+        technologies: ["React 18", "TypeScript", "Tailwind CSS", "Redux Toolkit", "React Query", "Recharts"],
       },
       {
         category: "Backend",
-        technologies: ["GoLang", "DynamoDB", "AWS Lambda"],
+        technologies: ["GoLang", "Gin Framework", "AWS Lambda", "API Gateway"],
       },
       {
-        category: "Cloud Infrastructure",
-        technologies: ["AWS S3", "AWS Cognito", "CloudWatch"],
+        category: "Database & Storage",
+        technologies: ["DynamoDB", "AWS S3", "ElastiCache"],
+      },
+      {
+        category: "DevOps & Infrastructure",
+        technologies: ["AWS CloudFormation", "Docker", "GitHub Actions", "CloudWatch"],
       },
     ],
     features: [
-      "Product catalog management with rich media support",
-      "Real-time inventory tracking and low-stock alerts",
-      "Order processing and fulfillment automation",
-      "Business analytics dashboard with key metrics",
-      "Multi-store management for chain retailers",
-      "Supplier integration and purchase order management",
-      "Customer relationship management tools",
-      "Customizable reports and export capabilities",
-      "Mobile-responsive interface for on-the-go access",
-      "Role-based access control for team collaboration",
+      "Product catalog management with bulk operations",
+      "Real-time inventory tracking and alerts",
+      "Order processing and fulfillment workflows",
+      "Business analytics and reporting dashboards",
+      "Multi-channel integration (Shopify, WooCommerce, etc.)",
+      "Automated inventory replenishment suggestions",
+      "Team collaboration and role-based access control",
+      "API for third-party integrations",
+      "Mobile-responsive design",
+      "Export capabilities for reports and data",
     ],
     architecture: {
       description:
-        "Cloud-native microservices architecture deployed on AWS. Frontend built with React and TypeScript, backend services in GoLang with serverless Lambda functions, and DynamoDB for scalable data storage.",
+        "The platform uses a microservices architecture deployed on AWS. The frontend is a React SPA, backend services are written in GoLang and deployed as Lambda functions, with DynamoDB for data persistence and S3 for media storage. The system uses API Gateway for routing and CloudFront for content delivery.",
       components: [
-        "React/TypeScript Frontend - Responsive single-page application",
-        "GoLang Microservices - High-performance backend APIs",
-        "AWS Lambda - Serverless compute for business logic",
-        "DynamoDB - NoSQL database for flexible data modeling",
-        "AWS S3 - Secure media storage for product images",
-        "AWS Cognito - User authentication and authorization",
-        "Amazon CloudWatch - Monitoring and logging",
-        "API Gateway - Secure API management and throttling",
+        "React SPA - Modern, responsive user interface",
+        "API Gateway - Request routing and rate limiting",
+        "GoLang Microservices - High-performance business logic",
+        "AWS Lambda - Serverless compute for scalability",
+        "DynamoDB - NoSQL database for flexible data models",
+        "S3 - Object storage for product images and documents",
+        "CloudFront CDN - Global content delivery",
+        "ElastiCache - Redis caching layer for performance",
+        "CloudWatch - Monitoring and logging",
+        "Cognito - User authentication and authorization",
       ],
     },
   },
   {
-    id: "e-commerce-platform",
+    id: "professional-portfolio",
+    title: "Professional Portfolio Website",
+    description:
+      "A modern, elegant portfolio website showcasing development skills and projects. Features smooth animations, responsive design, and optimized performance.",
+    longDescription:
+      "This portfolio website demonstrates proficiency in modern web development practices including server-side rendering, static site generation, SEO optimization, and performance optimization. Built with Next.js 14, TypeScript, and Tailwind CSS, it showcases best practices for accessibility and user experience.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Vercel"],
+    status: "Live",
+    image: "/professional-portfolio-website-design.jpg",
+    featured: true,
+    overview:
+      "A professional portfolio website built with cutting-edge web technologies to showcase development skills, projects, and experience. The site emphasizes performance, accessibility, and modern design principles.",
+    challenge:
+      "Creating a portfolio that stands out to recruiters and hiring managers while demonstrating technical expertise. The site needed to be fast, accessible, SEO-optimized, and showcase projects in an engaging way.",
+    solution:
+      "Built with Next.js 14 using the App Router for optimal performance and SEO. Implemented server-side rendering for fast initial page loads, used TypeScript for type safety, and Tailwind CSS for responsive design. The site achieves perfect Lighthouse scores and follows WCAG accessibility guidelines.",
+    results: [
+      "Achieved 100/100 Lighthouse performance score",
+      "Sub-1-second First Contentful Paint",
+      "Fully accessible with WCAG 2.1 AA compliance",
+      "SEO optimized with structured data",
+      "Mobile-first responsive design",
+    ],
+    techStack: [
+      {
+        category: "Framework",
+        technologies: ["Next.js 14", "React 18", "TypeScript"],
+      },
+      {
+        category: "Styling",
+        technologies: ["Tailwind CSS", "shadcn/ui", "CSS Modules"],
+      },
+      {
+        category: "Deployment",
+        technologies: ["Vercel", "Git", "GitHub"],
+      },
+    ],
+    features: [
+      "Server-side rendering for optimal performance",
+      "Responsive design for all devices",
+      "Dark mode support",
+      "Smooth page transitions and animations",
+      "SEO optimized with meta tags and structured data",
+      "Contact form with validation",
+      "Project showcase with filtering",
+      "Blog section for technical writing",
+      "Accessibility features (ARIA labels, keyboard navigation)",
+    ],
+    architecture: {
+      description:
+        "The portfolio uses Next.js 14 App Router with server components for optimal performance. Static pages are pre-rendered at build time, while dynamic content uses server-side rendering. The site is deployed on Vercel's edge network for global performance.",
+      components: [
+        "Next.js App Router - File-based routing and layouts",
+        "React Server Components - Zero-bundle server rendering",
+        "Tailwind CSS - Utility-first styling",
+        "shadcn/ui - Accessible component library",
+        "Vercel Edge Network - Global CDN deployment",
+        "TypeScript - Type-safe development",
+      ],
+    },
+  },
+  {
+    id: "ecommerce-platform",
     title: "E-Commerce Platform",
     description:
-      "Full-featured e-commerce platform with product catalog, shopping cart, secure payments, and order management.",
+      "A feature-rich e-commerce platform with product catalog, shopping cart, checkout process, and order management. Includes admin panel for inventory and order management.",
     longDescription:
-      "A complete e-commerce solution built with MERN stack, featuring product management, user authentication, shopping cart, and payment processing.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "/ecommerce-dashboard.png",
+      "A comprehensive e-commerce solution built with modern web technologies. The platform provides a complete shopping experience from product browsing to checkout, with an admin dashboard for managing inventory, orders, and customers.",
+    tags: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+    image: "/ecommerce-shopping-platform.jpg",
     overview:
-      "A robust e-commerce platform that enables online shopping with comprehensive features for both customers and administrators.",
+      "A full-featured e-commerce platform that enables businesses to sell products online. The platform includes customer-facing shopping features and a comprehensive admin dashboard for business management.",
     challenge:
-      "Building a scalable e-commerce system that handles product catalogs, user authentication, shopping carts, secure payments, and order management while providing an excellent user experience.",
+      "Building a scalable e-commerce platform that handles product catalogs, shopping carts, secure payments, and order management while providing an excellent user experience.",
     solution:
       "Developed a MERN stack application with React frontend, Express.js backend, MongoDB database, and Stripe payment integration. Implemented shopping cart functionality, order processing, and an admin dashboard for business operations.",
     results: [
@@ -299,16 +369,16 @@ export const projects = [
       ],
     },
   },
-];
+]
 
 export function getProjectById(id) {
-  return projects.find((project) => project.id === id);
+  return projects.find((project) => project.id === id)
 }
 
 export function getFeaturedProjects() {
-  return projects.filter((project) => project.featured);
+  return projects.filter((project) => project.featured)
 }
 
 export function getAllProjects() {
-  return projects;
+  return projects
 }

@@ -29,8 +29,8 @@ export function Navigation() {
   return (
     <nav
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-primary/10 backdrop-blur-lg border-b border-border shadow-sm" : "bg-transparent",
+        "fixed top-0 w-full z-50 transition-all duration-300 border-b border-gray-300",
+        isScrolled ? "bg-primary/10 backdrop-blur-lg border-gray-400 shadow-sm" : "bg-transparent",
       )}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">

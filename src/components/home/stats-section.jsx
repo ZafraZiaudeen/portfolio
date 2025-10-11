@@ -12,8 +12,8 @@ export function StatsSection() {
   ]
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5">
-      <div className="max-w-7xl mx-auto px-6">
+    <section ref={ref} className="py-12 bg-gradient-to-br from-background/50 via-muted/30 to-background/50">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, idx) => (
             <div key={idx} className="text-center">
