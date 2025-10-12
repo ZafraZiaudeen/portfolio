@@ -1,10 +1,10 @@
-# Fathima Zafra's Portfolio
+# Portfolio
 
 ![Professional Portfolio Website](public/professional-portfolio-website.png)
 
 A modern, responsive portfolio website showcasing my skills, experience, and projects as a Full-Stack Developer. Built with React.js, Vite, and Tailwind CSS, this site features smooth animations, interactive elements, and a clean, professional design optimized for all devices.
 
-[Live Demo](https://zafra-portfolio.netlify.app/) | [Download Resume](public/Resume-Zafra.pdf)
+[Live Demo](https://zafra-portfolio.netlify.app/)
 
 ## 🚀 Features
 
