@@ -19,10 +19,12 @@ const ContactPage = () => {
       const form = e.target;
       const formData = new FormData(form);
       
+      // Add form-name field which is essential for Netlify forms
+      formData.append("form-name", "contact");
+      
       const response = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: formData,
       });
 
       if (response.ok) {
@@ -73,9 +75,10 @@ const ContactPage = () => {
                 <form
                   name="contact"
                   method="POST"
-                  netlify="true"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
+                  action="/thank-you"
+                  encType="multipart/form-data"
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
@@ -90,22 +93,22 @@ const ContactPage = () => {
                   </p>
 
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">Name <span className="text-red-500">*</span></Label>
                     <Input id="name" name="name" placeholder="Your name" required />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">Email <span className="text-red-500">*</span></Label>
                     <Input id="email" name="email" type="email" placeholder="your.email@example.com" required />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
+                    <Label htmlFor="subject">Subject <span className="text-red-500">*</span></Label>
                     <Input id="subject" name="subject" placeholder="What's this about?" required />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">Message <span className="text-red-500">*</span></Label>
                     <Textarea
                       id="message"
                       name="message"
