@@ -5,10 +5,10 @@ export function StatsSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
 
   const stats = [
-    { value: 1, label: "Years Experience", suffix: "+" },
-    { value: 5, label: "Projects Completed", suffix: "+" },
+    { value: 6, label: "Months Experience", suffix: "+" },
+    { value: 3, label: "Projects Completed", suffix: "+" },
     { value: 8, label: "Technologies Mastered", suffix: "+" },
-    { value: 100, label: "Client Satisfaction", suffix: "%" },
+    // { value: 100, label: "Client Satisfaction", suffix: "%" },
   ]
 
   return (
