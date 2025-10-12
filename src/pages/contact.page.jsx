@@ -22,7 +22,10 @@ const ContactPage = () => {
       // Add form-name field which is essential for Netlify forms
       formData.append("form-name", "contact");
       
-      const response = await fetch("/", {
+      // Post to the current page URL for Netlify to process the form
+      const currentPage = window.location.pathname;
+      
+      const response = await fetch(currentPage, {
         method: "POST",
         body: formData,
       });
@@ -34,9 +37,12 @@ const ContactPage = () => {
         });
         form.reset();
       } else {
+        // Log the response for debugging (remove in production)
+        console.error("Form submission failed:", response.status, response.statusText);
         throw new Error("Form submission failed");
       }
-    } catch {
+    } catch (error) {
+      console.error("Submission error:", error);
       toast({
         title: "Error",
         description: "There was a problem sending your message. Please try again.",
@@ -77,8 +83,6 @@ const ContactPage = () => {
                   method="POST"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
-                  action="/thank-you"
-                  encType="multipart/form-data"
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
