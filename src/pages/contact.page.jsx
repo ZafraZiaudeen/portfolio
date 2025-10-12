@@ -143,10 +143,10 @@ const ContactPage = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <a
-                        href="mailto:contact@example.com"
+                        href="mailto:zafraziaudeen@gmail.com"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        contact@example.com
+                        zafraziaudeen@gmail.com
                       </a>
                     </div>
                   </div>
@@ -157,8 +157,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
-                      <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                        +1 (234) 567-890
+                      <a href="tel:+94768666570" className="text-muted-foreground hover:text-primary transition-colors">
+                        +94 76 866 6570
                       </a>
                     </div>
                   </div>
@@ -169,7 +169,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Location</h3>
-                      <p className="text-muted-foreground">Kandy, Sri Lanka</p>
+                      <p className="text-muted-foreground">Matale, Sri Lanka</p>
                     </div>
                   </div>
                 </CardContent>
@@ -183,7 +183,7 @@ const ContactPage = () => {
                 <CardContent>
                   <div className="flex gap-4">
                     <a
-                      href="https://github.com"
+                      href="https://github.com/ZafraZiaudeen"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
@@ -191,23 +191,16 @@ const ContactPage = () => {
                       <Github className="h-5 w-5 text-primary" />
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/in/zafra-ziaudeen/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
                     >
                       <Linkedin className="h-5 w-5 text-primary" />
                     </a>
+                   
                     <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
-                    >
-                      <Twitter className="h-5 w-5 text-primary" />
-                    </a>
-                    <a
-                      href="mailto:contact@example.com"
+                      href="mailto:zafraziaudeen@gmail.com"
                       className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
                     >
                       <Mail className="h-5 w-5 text-primary" />
