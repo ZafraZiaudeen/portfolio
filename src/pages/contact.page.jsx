@@ -5,55 +5,44 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
 
 const ContactPage = () => {
-  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-  try {
-    const form = e.target;
-    const formData = new FormData(form);
-    
-    formData.append("form-name", "contact");
-    
-    const currentPage = window.location.pathname;
-    
-    const response = await fetch(currentPage, {
-      method: "POST",
-      body: formData,
-    });
-
-    const responseText = await response.text();
-    
-    if (responseText.includes('Thank you! Your submission was successful.')) {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+    try {
+      const form = e.target;
+      const formData = new FormData(form);
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formData).toString(),
       });
-      form.reset();
-    } else {
-      if (responseText.includes('There was an error submitting the form')) {
-        throw new Error("Server error during submission");
+
+      if (response.ok) {
+        toast.success("Message sent!", {
+          description: "Thank you for reaching out. I'll get back to you soon."
+        });
+        form.reset();
       } else {
-        throw new Error("Unknown response from server");
+        throw new Error("Form submission failed");
       }
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("Error", {
+        description: "There was a problem sending your message. Please try again."
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (error) {
-    console.error("Submission error:", error);
-    toast({
-      title: "Error",
-      description: "There was a problem sending your message. Please try again.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  };
 
   return (
     <div className="min-h-screen pt-20">
