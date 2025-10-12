@@ -23,9 +23,7 @@ export default function AboutPage() {
       skills: [
         { name: "Node.js", level: 80 },
         { name: "Express.js", level: 85 },
-        { name: "GoLang", level: 75 },
-        { name: "RESTful APIs", level: 90 },
-        { name: "GraphQL", level: 70 },
+        { name: "GoLang", level: 40},
       ],
     },
     {
@@ -76,40 +74,20 @@ export default function AboutPage() {
 
   const certifications = [
     {
-      title: "Meta React Developer Professional Certificate",
-      issuer: "Coursera",
-      year: "2024",
-      description: "Comprehensive React.js training including hooks, state management, and testing",
-    },
-    {
-      title: "Google UX Design Professional Certificate",
-      issuer: "Coursera",
-      year: "2024",
-      description: "User experience design principles, wireframing, prototyping with Figma",
-    },
-    {
-      title: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      year: "2024",
-      description: "Cloud fundamentals, AWS services, security, and architecture best practices",
-    },
-    {
-      title: "MongoDB Developer Associate Certification",
-      issuer: "MongoDB University",
-      year: "2024",
-      description: "Database design, CRUD operations, aggregation pipelines, and performance optimization",
-    },
-    {
-      title: "TypeScript Programming",
-      issuer: "Microsoft Learn",
-      year: "2024",
-      description: "Type safety, interfaces, generics, decorators, and advanced TypeScript patterns",
-    },
-    {
-      title: "Professional Scrum Master I (PSM I)",
-      issuer: "Scrum.org",
-      year: "2024",
-      description: "Agile methodologies, sprint planning, team collaboration, and project management",
+      title: "Full-Stack Engineer - AI Professional Certification",
+      issuer: "STEM Link",
+      year: "2023",
+      description: "Comprehensive 4-month certification covering MERN Stack, LLMs, RAG pipelines, and Vector Databases. Completed a Hotel Discovery and Booking Platform with AI features.",
+      url: "https://stemlink.online/certificates/cmal0xlxw00032x7oe738b5kx",
+      modules: [
+        "React Essentials",
+        "Advanced React Development",
+        "Backend Basics and Foundations",
+        "LLM Foundations and Integrations",
+        "Advanced Backend Development and Deployment",
+        "Project Implementation"
+      ],
+      duration: "4 Months"
     },
   ]
 
@@ -290,16 +268,41 @@ export default function AboutPage() {
               </div>
               <div className="space-y-4">
                 {certifications.map((cert, idx) => (
-                  <Card key={idx} className="hover:shadow-md transition-shadow">
-                    <CardHeader className="pb-3">
-                      <CardTitle className="text-base">{cert.title}</CardTitle>
-                      <CardDescription className="text-sm">
-                        {cert.issuer} • {cert.year}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground">{cert.description}</p>
-                    </CardContent>
+                  <Card 
+                    key={idx} 
+                    className="hover:shadow-md transition-shadow"
+                  >
+                    <a 
+                      href={cert.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block hover:no-underline"
+                    >
+                      <CardHeader className="pb-3">
+                        <CardTitle className="text-base group-hover:text-primary transition-colors">
+                          {cert.title}
+                        </CardTitle>
+                        <CardDescription className="text-sm">
+                          {cert.issuer} • {cert.year} {cert.duration && `• ${cert.duration}`}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground mb-4">{cert.description}</p>
+                        {cert.modules && (
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            {cert.modules.map((module, moduleIdx) => (
+                              <Badge 
+                                key={moduleIdx} 
+                                variant="secondary" 
+                                className="text-xs"
+                              >
+                                {module}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
+                      </CardContent>
+                    </a>
                   </Card>
                 ))}
               </div>

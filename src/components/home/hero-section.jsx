@@ -89,6 +89,11 @@ export function HeroSection() {
               Get In Touch
             </Link>
           </Button>
+          <Button asChild size="lg" variant="secondary">
+            <a href="/Resume-Zafra.pdf" download>
+              Download Resume
+            </a>
+          </Button>
         </div>
 
         {/* Tech Stack Preview */}

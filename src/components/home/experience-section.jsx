@@ -55,44 +55,7 @@ export function ExperienceSection() {
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                  <GraduationCap className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <CardTitle className="text-2xl">ICBT Kandy</CardTitle>
-                  <CardDescription className="text-base">Software Engineering Student</CardDescription>
-                </div>
-              </div>
-              <Badge variant="secondary" className="w-fit">
-                2022 - Present
-              </Badge>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground">
-                Pursuing BSc (Hons) in Software Engineering with comprehensive coursework in programming, algorithms,
-                database systems, and software development methodologies.
-              </p>
-              <div className="space-y-2">
-                <p className="font-semibold text-sm">Academic Highlights:</p>
-                <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
-                  <li>BSc (Hons) in Software Engineering - In Progress</li>
-                  <li>HDCSE in Computing and Software Engineering - Completed</li>
-                  <li>Strong focus on practical application</li>
-                  <li>Active in coding competitions and hackathons</li>
-                </ul>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {["Data Structures", "Algorithms", "Web Development", "Database Systems"].map((course) => (
-                  <Badge key={course} variant="outline">
-                    {course}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+        
         </div>
       </div>
     </section>

@@ -34,23 +34,23 @@ export default function ProjectsPage() {
             {featuredProjects.map((project) => (
               <Card key={project.id} className="overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="relative h-48 md:h-auto overflow-hidden bg-muted">
+                  <div className="relative h-40 md:h-48 overflow-hidden bg-muted">
                     <img
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="p-4 flex flex-col justify-between">
+                  <div className="p-3 md:p-4 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-start justify-between mb-3">
-                        <CardTitle className="text-xl">{project.title}</CardTitle>
+                      <div className="flex items-start justify-between mb-2 md:mb-3">
+                        <CardTitle className="text-lg md:text-xl">{project.title}</CardTitle>
                         {project.status && (
                           <Badge variant={project.status === "Live" ? "default" : "secondary"}>{project.status}</Badge>
                         )}
                       </div>
-                      <CardDescription className="text-sm mb-3">{project.description}</CardDescription>
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <CardDescription className="text-sm mb-2 md:mb-3">{project.description}</CardDescription>
+                      <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
                         {project.tags.slice(0, 5).map((tag) => (
                           <Badge key={tag} variant="outline" className="text-xs">
                             {tag}
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
                         {project.tags.length > 5 && <Badge variant="outline" className="text-xs">+{project.tags.length - 5}</Badge>}
                       </div>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-1 md:gap-2">
                       <Button asChild size="sm">
                         <Link to={`/projects/${project.id}`}>
                           View Details

@@ -151,6 +151,17 @@ export default function ProjectDetailPage() {
               <CardHeader>
                 <CardDescription className="text-base">{project.architecture.description}</CardDescription>
               </CardHeader>
+              {project.architecture.image && (
+                <CardContent>
+                  <div className="max-w-3xl mx-auto relative rounded-lg overflow-hidden shadow-lg bg-secondary/10 p-4">
+                    <img
+                      src={project.architecture.image}
+                      alt="System Architecture Diagram"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </CardContent>
+              )}
             </Card>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {project.architecture.components.map((component, idx) => (

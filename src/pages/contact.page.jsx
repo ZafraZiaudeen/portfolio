@@ -52,9 +52,15 @@ const ContactPage = () => {
           <h1 className="text-5xl font-bold mb-6 font-[family-name:var(--font-playfair)]">
             Get In <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Touch</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
+          <Button asChild size="lg" variant="outline" className="hover:bg-primary/10">
+            <a href="/Resume-Zafra.pdf" download>
+              <Mail className="mr-2 h-4 w-4" />
+              Download Resume
+            </a>
+          </Button>
         </div>
       </section>
 
