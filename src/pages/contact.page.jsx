@@ -17,12 +17,18 @@ const ContactPage = () => {
 
     try {
       const form = e.target;
-      const formData = new FormData(form);
+      const data = new FormData(form);
       
-      const response = await fetch("/", {
+      // Encode the data for Netlify
+      const urlEncodedData = new URLSearchParams();
+      for (const pair of data) {
+        urlEncodedData.append(pair[0], pair[1]);
+      }
+      
+      const response = await fetch(form.getAttribute("action") || "/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: urlEncodedData.toString(),
       });
 
       if (response.ok) {
@@ -73,7 +79,9 @@ const ContactPage = () => {
                 <form
                   name="contact"
                   method="POST"
+                  action="/thank-you"
                   data-netlify="true"
+                  data-netlify-recaptcha="true"
                   data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
                   className="space-y-6"
