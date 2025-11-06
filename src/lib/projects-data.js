@@ -1,5 +1,75 @@
 export const projects = [
   {
+    id: "trashtruce-waste-management",
+    title: "TrashTruce - Waste Management System",
+    description:
+      "A comprehensive waste management system specifically built for the Kandy region that streamlines recycling processes, bin management, and waste collection scheduling. Features include real-time location tracking, recycling guides, event management, and an e-commerce platform for recycled products.",
+    longDescription:
+      "TrashTruce is an end-to-end waste management solution designed specifically for the Kandy region, connecting local citizens with waste management services. The platform includes features for waste bin tracking, recycling education, event organization, and a marketplace for recycled products. It helps the Kandy community organize waste collection efficiently while promoting sustainable practices through educational content and community events.",
+    tags: ["PHP", "MySQL", "JavaScript", "Bootstrap", "jQuery", "Google Maps API", "PHPMailer"],
+    liveUrl: "",
+    githubUrl: "https://github.com/ZafraZiaudeen/TrashTruce-WasteManagementSystem",
+    image: "/trashtruce.png",
+    featured: false,
+    status: "Completed",
+    overview:
+      "TrashTruce is a full-stack web application designed to revolutionize waste management at the community level. The system comprises three main interfaces: admin portal, customer portal, and staff portal, each tailored to specific user needs and responsibilities.",
+    challenge:
+      "The Kandy region faced significant challenges in organizing efficient waste collection, promoting recycling awareness, and managing waste-related resources. Traditional systems in the area lacked integration between different aspects of waste management and failed to engage local citizens in sustainable practices.",
+    solution:
+      "I developed a comprehensive platform that integrates waste bin management, recycling education, event organization, and e-commerce capabilities. The system features real-time location tracking for waste bins, detailed recycling guides, community event management, and a marketplace for recycled products. The solution includes automated scheduling and email notifications using PHPMailer.",
+    results: [
+      "Streamlined waste collection process with digital bin tracking and scheduling",
+      "Increased community engagement through integrated events and recycling guides",
+      "Enhanced recycling awareness with educational content and guidelines",
+      "Facilitated sustainable practices through recycled product marketplace",
+    ],
+    techStack: [
+      {
+        category: "Frontend",
+        technologies: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap"],
+      },
+      {
+        category: "Backend",
+        technologies: ["PHP", "MySQL", "PHPMailer"],
+      },
+      {
+        category: "APIs",
+        technologies: ["Google Maps API"],
+      },
+      {
+        category: "Tools & Libraries",
+        technologies: ["XAMPP", "Git", "Apache"],
+      }
+    ],
+    features: [
+      "Real-time waste bin location tracking with Google Maps integration",
+      "Comprehensive recycling guides and educational content",
+      "Community event management and registration system",
+      "E-commerce platform for recycled products",
+      "Multi-portal architecture (Admin, Staff, and Customer interfaces)",
+      "Automated waste collection scheduling system",
+      "Email notifications for collection schedules and events",
+      "Interactive location-based bin management",
+      "User feedback and community engagement system",
+      "Digital recycling awareness campaigns and resources"
+    ],
+    architecture: {
+      description:
+        "The application follows a traditional LAMP stack architecture with PHP backend and MySQL database. It implements a multi-portal system with role-based access control, integrates Google Maps for location services, and uses PHPMailer for automated communications.",
+      components: [
+        "PHP Backend - MVC architecture for business logic",
+        "MySQL Database - Structured data storage for waste management data",
+        "Google Maps Integration - Real-time location tracking and visualization",
+        "PHPMailer Service - Automated notifications and communications",
+        "Bootstrap Frontend - Responsive UI components",
+        "Apache Server - Web server configuration",
+        "Multi-portal System - Separate interfaces for different user roles"
+      ],
+      image: "/trashtruce-architecture-diagram.png"
+    }
+  },
+  {
     id: "horizone-hotel-booking",
     title: "Horizone - Hotel Booking Platform",
     description:
