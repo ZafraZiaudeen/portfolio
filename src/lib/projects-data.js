@@ -73,35 +73,36 @@ export const projects = [
     id: "horizone-hotel-booking",
     title: "Horizone - Hotel Booking Platform",
     description:
-      "An innovative hotel booking platform powered by AI, designed to enhance the search and booking experience. By leveraging OpenAI's LLM, the platform offers intelligent search recommendations, implements secure payment processing through Stripe integration, user authentication, and a fully responsive design.",
+      "A comprehensive full-stack hotel booking platform powered by AI and automated workflows. Features AI-driven search recommendations via OpenAI, secure Stripe payments, user authentication with Clerk, and n8n-powered email automation for booking receipts. Built with React frontend and Node.js/Express backend.",
     longDescription:
-      "Horizone is an innovative hotel booking platform powered by AI, designed to enhance the search and booking experience. By leveraging OpenAI's LLM, the platform revolutionizes the way users search for and book accommodations. It provides intelligent search recommendations, implements secure payment processing through Stripe, and offers a seamless user experience across all devices.",
-    tags: ["React.js", "TypeScript", "MongoDB", "Clerk", "OpenAI", "Stripe", "Tailwind CSS"],
+      "Horizone is a modern, full-stack hotel booking platform that leverages AI and automation to revolutionize accommodation booking. The frontend, built with React and TypeScript, provides an intuitive user interface, while the backend, developed with Node.js and Express, handles business logic and data management. Integrated with OpenAI for intelligent search, Stripe for payments, Clerk for authentication, and n8n for automated email workflows, ensuring a seamless and efficient booking experience.",
+    tags: ["React.js", "TypeScript", "Node.js", "Express", "MongoDB", "Clerk", "OpenAI", "Stripe", "n8n", "Tailwind CSS"],
     liveUrl: "https://aidf-horizone-frontend-zafra.netlify.app/",
     githubUrl: "https://github.com/ZafraZiaudeen/Hotel-Booking",
     image: "/modern-hotel-booking-interface-dashboard.jpg",
     featured: true,
     status: "Live",
     overview:
-      "Horizone - Hotel Booking Platform - is a full-stack web application designed to streamline the hotel booking experience. The platform combines modern web technologies with AI-powered search capabilities using OpenAI to help users find their perfect accommodation quickly and efficiently.",
+      "Horizone is a full-stack hotel booking platform combining AI-powered search, secure payments, and automated email workflows. The system includes a React-based frontend for user interactions and a Node.js/Express backend for API services, with n8n handling email automation to deliver booking receipts and notifications.",
     challenge:
-      "The hospitality industry needed a modern booking platform that could handle complex search queries, provide real-time availability updates, process secure payments, and deliver a seamless user experience across devices. Traditional booking systems often suffered from slow search performance, complicated user interfaces, and security vulnerabilities.",
+      "The hospitality industry required a robust booking platform capable of handling complex queries, real-time updates, secure transactions, and automated communications. Existing solutions often lacked integration between AI search, payment processing, and workflow automation, leading to inefficiencies and poor user experiences.",
     solution:
-      "I architected and developed a comprehensive solution using React.js for the frontend, MongoDB for flexible data storage, and Clerk for robust authentication. The platform implements AI-driven search algorithms using OpenAI to provide intelligent recommendations, integrates Stripe for secure payment processing. The responsive design ensures optimal user experience on all devices.",
+      "Developed a full-stack solution with a React/TypeScript frontend for responsive UI, Node.js/Express backend for scalable APIs, MongoDB for data storage, Clerk for authentication, OpenAI for AI search, Stripe for payments, and n8n for workflow automation. This ensures intelligent recommendations, secure transactions, and automated email receipts, all deployed on Netlify and MongoDB Atlas.",
     results: [
-      "Reduced average booking time by 40% through AI-powered search",
-      "Achieved 99.9% uptime with robust error handling and monitoring",
-      "Processed over 1,000 secure transactions through Stripe integration",
-      "Maintained sub-2-second page load times across all pages",
+      "Reduced booking time by 40% with AI-powered search",
+      "Achieved 99.9% uptime with comprehensive error handling",
+      "Processed over 1,000 secure transactions via Stripe",
+      "Automated email receipts and notifications using n8n workflows",
+      "Maintained sub-2-second load times across all pages",
     ],
     techStack: [
       {
         category: "Frontend",
-        technologies: ["React js", "TypeScript", "Tailwind CSS", "React Query"],
+        technologies: ["React.js", "TypeScript", "Tailwind CSS", "React Query", "Vite"],
       },
       {
-        category: "Backend/Database",
-        technologies: ["MongoDB", "Mongoose"],
+        category: "Backend",
+        technologies: ["Node.js", "Express", "TypeScript", "MongoDB", "Mongoose"],
       },
       {
         category: "Authentication",
@@ -109,39 +110,46 @@ export const projects = [
       },
       {
         category: "AI/ML",
-        technologies: ["OpenAI LLM"],
+        technologies: ["OpenAI LLM", "@langchain/openai"],
       },
       {
         category: "Payment",
         technologies: ["Stripe API"],
       },
       {
+        category: "Automation",
+        technologies: ["n8n"],
+      },
+      {
         category: "DevOps & Tools",
-        technologies: ["Git", "Netlify", "MongoDB Atlas", "Postman", "ESLint", "Prettier"],
+        technologies: ["Git", "Netlify", "MongoDB Atlas", "Postman", "ESLint", "Prettier", "Nodemon"],
       },
     ],
     features: [
-      "AI-powered hotel search with intelligent recommendations using OpenAI",
-      "Real-time availability checking and booking management",
+      "AI-powered hotel search with OpenAI LLM recommendations",
+      "Real-time availability and booking management",
       "Secure payment processing with Stripe integration",
-      "User authentication and authorization with Clerk",
-      "Responsive design optimized for all devices",
-      "Advanced filtering and sorting options",
-      "User profile and booking history management",
-      "Admin dashboard for hotel management",
-      "Email notifications for booking confirmations",
+      "User authentication and authorization via Clerk",
+      "Responsive design for all devices",
+      "Advanced filtering, sorting, and search options",
+      "User profiles and booking history",
+      "Admin dashboard for hotel and booking management",
+      "Automated email receipts and notifications using n8n workflows",
       "Review and rating system",
+      "Embedding-based search for enhanced recommendations",
+      "Webhook integration for payment confirmations",
     ],
     architecture: {
       description:
-        "The application follows a modern React.js architecture with server-side rendering, API routes for backend logic, and MongoDB database. The system implements Clerk-based authentication, Stripe payment processing, and OpenAI-powered search algorithms.",
+        "Horizone follows a full-stack architecture with a React frontend deployed on Netlify, a Node.js/Express backend for API logic, MongoDB for data persistence, and n8n for workflow automation. Integrations include Clerk for auth, OpenAI for AI features, and Stripe for payments, ensuring scalability and reliability.",
       components: [
-        "React.js Frontend - Component-based UI with Javascript",
-        "MongoDB Database - Flexible document storage for hotels, bookings, and users",
-        "Clerk Auth Service - Token-based authentication and authorization",
-        "OpenAI Integration - Intelligent recommendation system",
-        "Stripe Integration - Secure payment processing",
-        "Email Service - Automated booking confirmations",
+        "React.js Frontend - Component-based UI with TypeScript and Tailwind CSS",
+        "Node.js/Express Backend - RESTful APIs with TypeScript and middleware",
+        "MongoDB Database - Document-based storage with Mongoose ODM",
+        "Clerk Auth Service - Secure authentication and user management",
+        "OpenAI Integration - AI-driven search and recommendations",
+        "Stripe Integration - Payment processing and webhooks",
+        "n8n Workflows - Automated email receipts and notifications",
         "Admin Dashboard - Hotel and booking management interface",
       ],
       image: "/horizone-architecture-diagram.png",
@@ -213,115 +221,6 @@ export const projects = [
       ],
     },
   },
- 
-  // {
-  //   id: "task-management-app",
-  //   title: "Task Management App",
-  //   description:
-  //     "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
-  //   longDescription:
-  //     "A modern task management application that enables teams to collaborate effectively. Features real-time updates, project boards, task assignments, and progress tracking.",
-  //   tags: ["React", "TypeScript", "Firebase", "Material-UI"],
-  //   image: "/task-management-kanban.png",
-  //   overview:
-  //     "A collaborative task management tool designed for teams to organize work, track progress, and communicate effectively. Built with real-time synchronization for seamless collaboration.",
-  //   challenge:
-  //     "Creating a task management system that supports real-time collaboration, handles complex project structures, and provides an intuitive interface for team coordination.",
-  //   solution:
-  //     "Built with React and TypeScript for type-safe development, Firebase for real-time database and authentication, and Material-UI for a polished interface. Implemented Kanban boards, task assignments, and real-time updates.",
-  //   results: [
-  //     "Real-time synchronization across all users",
-  //     "Supports unlimited projects and tasks",
-  //     "Intuitive drag-and-drop interface",
-  //     "Mobile-responsive design",
-  //   ],
-  //   techStack: [
-  //     {
-  //       category: "Frontend",
-  //       technologies: ["React", "TypeScript", "Material-UI", "React DnD"],
-  //     },
-  //     {
-  //       category: "Backend",
-  //       technologies: ["Firebase Realtime Database", "Firebase Auth", "Cloud Functions"],
-  //     },
-  //   ],
-  //   features: [
-  //     "Kanban board interface",
-  //     "Real-time task updates",
-  //     "Team collaboration",
-  //     "Task assignments and due dates",
-  //     "Project organization",
-  //     "Activity tracking",
-  //     "File attachments",
-  //     "Comments and discussions",
-  //   ],
-  //   architecture: {
-  //     description:
-  //       "Firebase-powered real-time application with React frontend. Uses Firebase Realtime Database for instant synchronization and Firebase Auth for user management.",
-  //     components: [
-  //       "React Frontend - Interactive UI with drag-and-drop",
-  //       "Firebase Realtime Database - Real-time data sync",
-  //       "Firebase Auth - User authentication",
-  //       "Cloud Functions - Backend logic",
-  //       "Material-UI - Component library",
-  //     ],
-  //   },
-  // },
-  // {
-  //   id: "weather-dashboard",
-  //   title: "Weather Dashboard",
-  //   description:
-  //     "An interactive weather dashboard providing real-time weather data, forecasts, and weather maps. Features location-based weather tracking and historical data visualization.",
-  //   longDescription:
-  //     "A comprehensive weather dashboard that provides current conditions, forecasts, and weather visualizations. Integrates with OpenWeather API for accurate, real-time weather data.",
-  //   tags: ["React", "TypeScript", "OpenWeather API", "Chart.js"],
-  //   liveUrl: "#",
-  //   githubUrl: "#",
-  //   image: "/weather-dashboard-interface.png",
-  //   overview:
-  //     "An interactive weather dashboard that provides comprehensive weather information including current conditions, forecasts, and historical data visualizations.",
-  //   challenge:
-  //     "Creating an intuitive weather dashboard that presents complex meteorological data in an accessible format while providing accurate, real-time information.",
-  //   solution:
-  //     "Integrated OpenWeather API for weather data, used Chart.js for data visualization, and implemented geolocation for automatic location detection. Built with React and TypeScript for reliability.",
-  //   results: [
-  //     "Real-time weather updates",
-  //     "7-day forecast accuracy",
-  //     "Interactive weather maps",
-  //     "Historical data visualization",
-  //   ],
-  //   techStack: [
-  //     {
-  //       category: "Frontend",
-  //       technologies: ["React", "TypeScript", "Chart.js", "Leaflet"],
-  //     },
-  //     {
-  //       category: "API",
-  //       technologies: ["OpenWeather API", "Geolocation API"],
-  //     },
-  //   ],
-  //   features: [
-  //     "Current weather conditions",
-  //     "7-day weather forecast",
-  //     "Hourly forecasts",
-  //     "Weather maps and radar",
-  //     "Location-based weather",
-  //     "Historical data charts",
-  //     "Weather alerts",
-  //     "Multiple location tracking",
-  //   ],
-  //   architecture: {
-  //     description:
-  //       "React application that fetches data from OpenWeather API and displays it using Chart.js visualizations. Uses browser geolocation for automatic location detection.",
-  //     components: [
-  //       "React Frontend - Weather display interface",
-  //       "OpenWeather API - Weather data source",
-  //       "Chart.js - Data visualization",
-  //       "Leaflet - Interactive maps",
-  //       "Geolocation API - Location detection",
-  //     ],
-  //   },
-  // },
 ]
 
 export function getProjectById(id) {
